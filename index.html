@@ -4,67 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Husnain Rehman - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Husnain Rehman</h1>
-    <p>BSCS Student | Web Developer</p>
+    <div class="container">
+      <a href="#home" class="logo">Husnain<span>.</span></a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <p>
-    <a href="#" download>
-    <button>Download CV</button>
-    </a>
-  </p>
 
-  <section>
-    <h2>About Me</h2>
-    <table>
-      <tr>
-        <td>
-          <img src="back.jpg" alt="Husnain Rehman" width="200" height="200">
-        </td>
-        <td>
-          <p>
-            Hello! I’m <b>Husnain Rehman</b>, <b>Computer Science student</b> at 
-            <b>University of Central Punjab</b>
-          </p>
-        </td>
-      </tr>
-    </table>
+  <section class="home" id="home">
+    <div class="container">
+      <div class="home-content">
+        <h1><span>Husnain Rehman</span></h1>
+        <h3 class="typing-text">I'm a <span>Web Developer</span></h3>
+        <p>BSCS Student at University of Central Punjab with a passion for creating innovative web solutions and applications.</p>
+        <a href="#" download class="btn">
+          <button>Download CV</button>
+        </a>
+      </div>
+      <div class="home-img">
+        <img src="back.jpg" alt="Husnain Rehman">
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>My Skills</h2>
-    <p>Includes :</p>
-    <ul>
-      <li>C / C++ Programming</li>
-      <li>Python Programming</li>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>SQL Database Management</li>
-    </ul>
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="heading">My <span>Skills</span></h2>
+      <div class="skills-container">
+        <div class="skill-box">
+          <h3>C</h3>
+        </div>
+        <div class="skill-box">
+          <h3>C++</h3>
+        </div>
+        <div class="skill-box">
+          <h3>Python</h3>
+        </div>
+        <div class="skill-box">
+          <h3>SQL</h3>
+        </div>
+        <div class="skill-box">
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-box">
+          <h3>CSS</h3>
+        </div>
+        <div class="skill-box">
+          <h3>HTML</h3>
+        </div>
+        <div class="skill-box">
+          <h3>React</h3>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>My Hobbies</h2>
-    <p>Things I do mostly in my free time:</p>
-    <ul>
-      <li>Learning Automation</li>
-      <li>Watching Movies and Web Series</li>
-      <li>Playing strategy and simulation games</li>
-    </ul>
+  <section class="hobbies">
+    <div class="container">
+      <h2 class="heading">My <span>Hobbies</span></h2>
+      <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Things I do mostly in my free time:</p>
+      <ul class="hobbies-list">
+        <li>Playing games</li>
+        <li>Learning Automation</li>
+        <li>Watching Movies and Web Series</li>
+       
+      </ul>
+    </div>
   </section>
-  <hr>
+
   <footer>
-    <h2>Contact Me</h2>
-    <p>husnainrehman26@gmail.com</p>
-    <p>© 2025 Husnain Rehman. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2023 Husnain Rehman. All Rights Reserved.</p>
+    </div>
   </footer>
 
 </body>
