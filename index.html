@@ -1,90 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Husnain Rehman - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husnain Rehman - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Husnain<span>.</span></div>
+            <label for="sidebar-toggle" class="sidebar-close-btn">×</label>
+        </div>
+        <div class="sidebar-nav">
+            <a href="index.html" class="active">
+                <span>Home</span>
+            </a>
+            <a href="about.html">
+                <span>About</span>
+            </a>
+            <a href="contact.html">
+                <span>Contact</span>
+            </a>
+            <a href="#skills">
+                <span>Skills</span>
+            </a>
+            <a href="#hobbies">
+                <span>Hobbies</span>
+            </a>
+        </div>
 
-  <header>
-    <div class="container">
-      <a href="#home" class="logo">Husnain<span>.</span></a>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+        <div class="sidebar-footer">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/husnainr_x" target="_blank">IG</a>
+                <a href="https://www.linkedin.com/in/husnain-rehman-ab04702b4" target="_blank">IN</a>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <section class="home" id="home">
-    <div class="container">
-      <div class="home-content">
-        <h1><span>Husnain Rehman</span></h1>
-        <h3 class="typing-text">I'm a <span>Web Developer</span></h3>
-        <p>BSCS Student at University of Central Punjab with a passion for creating innovative web solutions and applications.</p>
-        <a href="#" download class="btn">
-          <button>Download CV</button>
-        </a>
-      </div>
-      <div class="home-img">
-        <img src="back.jpg" alt="Husnain Rehman">
-      </div>
+    <div class="main-content">
+        <header>
+            <div class="container">
+                <label for="sidebar-toggle" class="sidebar-open-btn">☰</label>
+                <a href="#" class="logo">Husnain<span>.</span></a>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="home" id="home">
+                <div class="container home-container">
+                    <div class="home-content">
+                        <h1><span>Husnain Rehman</span></h1>
+                        <h3 class="typing-text">I'm a <span>Web Developer</span></h3>
+                        <p>BSCS Student at University of Central Punjab with passion for web apps and automation.</p>
+                        <a href="#" class="btn" download><button>Download CV</button></a>
+                    </div>
+
+                    <div class="home-img">
+                        <img src="back.jpg" alt="Profile">
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills" id="skills">
+                <div class="container">
+                    <h2 class="heading">My <span>Skills</span></h2>
+                    <div class="skills-container">
+                        <div class="skill-box"><h3>C</h3></div>
+                        <div class="skill-box"><h3>C++</h3></div>
+                        <div class="skill-box"><h3>Python</h3></div>
+                        <div class="skill-box"><h3>SQL</h3></div>
+                        <div class="skill-box"><h3>JavaScript</h3></div>
+                        <div class="skill-box"><h3>CSS</h3></div>
+                        <div class="skill-box"><h3>HTML</h3></div>
+                        <div class="skill-box"><h3>React</h3></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hobbies" id="hobbies">
+                <div class="container">
+                    <h2 class="heading">My <span>Hobbies</span></h2>
+                    <ul class="hobbies-list">
+                        <li>Playing games</li>
+                        <li>Learning Automation</li>
+                        <li>Watching Movies & Web Series</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Husnain Rehman — All Rights Reserved.</p>
+        </footer>
     </div>
-  </section>
-
-  <section class="skills" id="skills">
-    <div class="container">
-      <h2 class="heading">My <span>Skills</span></h2>
-      <div class="skills-container">
-        <div class="skill-box">
-          <h3>C</h3>
-        </div>
-        <div class="skill-box">
-          <h3>C++</h3>
-        </div>
-        <div class="skill-box">
-          <h3>Python</h3>
-        </div>
-        <div class="skill-box">
-          <h3>SQL</h3>
-        </div>
-        <div class="skill-box">
-          <h3>JavaScript</h3>
-        </div>
-        <div class="skill-box">
-          <h3>CSS</h3>
-        </div>
-        <div class="skill-box">
-          <h3>HTML</h3>
-        </div>
-        <div class="skill-box">
-          <h3>React</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="hobbies">
-    <div class="container">
-      <h2 class="heading">My <span>Hobbies</span></h2>
-      <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Things I do mostly in my free time:</p>
-      <ul class="hobbies-list">
-        <li>Playing games</li>
-        <li>Learning Automation</li>
-        <li>Watching Movies and Web Series</li>
-       
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Husnain Rehman. All Rights Reserved.</p>
-    </div>
-  </footer>
-
 </body>
 </html>
