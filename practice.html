@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Tasks | Husnain Rehman</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .practice-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+    
+    .tasks-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .tasks-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .task-box {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-light);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .task-center {
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    .addition {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .addition input {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    
+    .task-box button {
+      margin-top: auto;
+    }
+    
+    @media (max-width: 768px) {
+      .tasks-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .task-box {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+  <div class="sidebar">
+      <div class="sidebar-header">
+          <div class="sidebar-logo">Husnain<span>.</span></div>
+          <label for="sidebar-toggle" class="sidebar-close-btn">×</label>
+      </div>
+      <div class="sidebar-nav">
+          <a href="index.html">Home</a>
+          <a href="project.html">Projects</a>
+           <a href="practice.html">
+                <span>Calculator</span>
+            </a>
+          <a href="practice.html" class="active">Practice</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="sidebar-footer">
+          <div class="social-icons">
+              <a href="https://www.instagram.com/husnainr_x" target="_blank">IG</a>
+              <a href="https://www.linkedin.com/in/husnain-rehman-ab04702b4" target="_blank">LN</a>
+          </div>
+      </div>
+  </div>
+
+  <div class="main-content">
+    <header>
+        <div class="container">
+            <label for="sidebar-toggle" class="sidebar-open-btn">☰</label>
+            <a href="#" class="logo">Husnain<span>.</span></a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="project.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="practice-main">
+        <div class="tasks-container">
+            <h2 class="heading">Practice Tasks</h2>
+            
+            <div class="tasks-row">
+                <!-- Task 1 -->
+                <div class="task-box">
+                    <h3>Info Display</h3>
+                    <input type="text" id="nameInput" placeholder="Name">
+                    <input type="number" id="ageInput" placeholder="Age">
+                    <input type="text" id="skillsInput" placeholder="Skills">
+                    <button onclick="submitUserInfo()">Submit</button>
+                    <div id="result1" class="result"></div>
+                </div>
+
+                <!-- Task 2 -->
+                <div class="task-box">
+                    <h3>Addition</h3>
+                    <div class="addition">
+                        <input type="number" id="num1" placeholder="Number">
+                        <span>+</span>
+                        <input type="number" id="num2" placeholder="Number">
+                    </div>
+                    <button onclick="addNumbers()">Add Numbers</button>
+                    <div id="result2" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Task 3 - Centered below -->
+            <div class="task-box task-center">
+                <h3>Average</h3>
+                <input type="text" id="marksInput" placeholder="Enter marks (comma separated)">
+                <button onclick="calculateAverage()">Calculate Average</button>
+                <div id="result3" class="result"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Husnain Rehman. All rights reserved.</p>
+        </div>
+    </footer>
+  </div>
+
+  <script>
+    function submitUserInfo() {
+        const name = document.getElementById("nameInput").value;
+        const age = document.getElementById("ageInput").value;
+        const skills = document.getElementById("skillsInput").value;
+        const resultDiv = document.getElementById("result1");
+
+        if (!name || !age || !skills) {
+            resultDiv.textContent = "Please fill all fields";
+            resultDiv.className = "result error";
+            return;
+        }
+
+        console.log(`Name: ${name}, Age: ${age}, Skills: ${skills}`);
+
+        resultDiv.textContent = `Name: ${name}, Age: ${age}, Skills: ${skills}`;
+        resultDiv.className = "result success";
+    }
+
+    function addNumbers() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        const resultDiv = document.getElementById("result2");
+
+        if (isNaN(num1) || isNaN(num2)) {
+            resultDiv.textContent = "Please enter valid numbers";
+            resultDiv.className = "result error";
+            return;
+        }
+
+        const sum = num1 + num2;
+
+        console.log(`Sum of ${num1} + ${num2} is ${sum}`);
+
+        resultDiv.textContent = `Result: ${num1} + ${num2} = ${sum}`;
+        resultDiv.className = "result success";
+    }
+
+    function calculateAverage() {
+        const marksInput = document.getElementById("marksInput").value;
+        const resultDiv = document.getElementById("result3");
+
+        if (!marksInput) {
+            resultDiv.textContent = "Please enter marks";
+            resultDiv.className = "result error";
+            return;
+        }
+
+        const marks = marksInput.split(',').map(mark => parseFloat(mark.trim()));
+        
+        if (marks.some(isNaN)) {
+            resultDiv.textContent = "Please enter valid numbers";
+            resultDiv.className = "result error";
+            return;
+        }
+
+        const average = marks.reduce((a, b) => a + b) / marks.length;
+
+        console.log(`Average of marks = ${average.toFixed(2)}`);
+
+        resultDiv.textContent = `Average: ${average.toFixed(2)}`;
+        resultDiv.className = "result success";
+    }
+</script>
+
+</body>
+</html>

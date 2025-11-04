@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator | Husnain Rehman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+  <div class="sidebar">
+      <div class="sidebar-header">
+          <div class="sidebar-logo">Husnain<span>.</span></div>
+          <label for="sidebar-toggle" class="sidebar-close-btn">×</label>
+      </div>
+      <div class="sidebar-nav">
+          <a href="index.html">Home</a>
+          <a href="project.html">Projects</a>
+          <a href="practice.html">Calculator</a>
+           <a href="practice.html">Practice</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="sidebar-footer">
+          <div class="social-icons">
+              <a href="https://www.instagram.com/husnainr_x" target="_blank">IG</a>
+              <a href="https://www.linkedin.com/in/husnain-rehman-ab04702b4" target="_blank">LN</a>
+          </div>
+      </div>
+  </div>
+
+ <div class="main-content">
+    <header>
+        <div class="container">
+            <label for="sidebar-toggle" class="sidebar-open-btn">☰</label>
+            <a href="#" class="logo">Husnain<span>.</span></a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="project.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="practice-main">
+        <h2 class="heading"><span>Calculator</span></h2>
+        <div id="calculator">
+            <input id="N-Data" readonly>
+            <div class="keys">
+                <button onclick="addN('+')">+</button>
+                <button onclick="addN('7')">7</button>
+                <button onclick="addN('8')">8</button>
+                <button onclick="addN('9')">9</button>
+                <button onclick="addN('-')">-</button>
+                <button onclick="addN('4')">4</button>
+                <button onclick="addN('5')">5</button>
+                <button onclick="addN('6')">6</button>
+                <button onclick="addN('*')">*</button>
+                <button onclick="addN('1')">1</button>
+                <button onclick="addN('2')">2</button>
+                <button onclick="addN('3')">3</button>
+                <button onclick="addN('/')">/</button>
+                <button onclick="addN('0')">0</button>
+                <button onclick="addN('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="clearDisplay()">C</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Husnain Rehman. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
