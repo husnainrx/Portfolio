@@ -1399,7 +1399,6 @@ footer {
 }
 
 
-/* Section Toggle Styles */
 .hidden-section {
   display: none;
 }
@@ -1420,7 +1419,6 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Theme Toggle Styles */
 .theme-toggle {
     background: transparent;
     border: none;
@@ -1524,7 +1522,6 @@ footer {
     visibility: visible;
 }
 
-/* Light Mode Variables */
 .light-mode {
     --bg-primary: #f8fafc;
     --bg-secondary: #e2e8f0;
@@ -1537,7 +1534,6 @@ footer {
     --border-light: #e2e8f0;
 }
 
-/* Header Styles for Light Mode */
 header {
     position: sticky;
     top: 0;
@@ -1567,7 +1563,6 @@ header.scrolled {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* Navigation Links */
 nav {
     display: flex;
     gap: 2.5rem;
@@ -1615,7 +1610,7 @@ nav a.active::after {
     width: 100%;
 }
 
-/* Logo Styles */
+
 .logo {
     font-size: 1.75rem;
     font-weight: 700;
@@ -1625,7 +1620,7 @@ nav a.active::after {
     background-clip: text;
 }
 
-/* Sidebar Open Button */
+
 .sidebar-open-btn {
     background: var(--primary-color);
     color: white;
@@ -1651,7 +1646,7 @@ nav a.active::after {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* Theme Toggle in Navigation */
+
 nav .theme-toggle {
     margin-left: 1rem;
 }
@@ -1660,7 +1655,7 @@ nav .theme-toggle {
     background: rgba(99, 102, 241, 0.1);
 }
 
-/* Floating Theme Toggle */
+
 .theme-toggle.floating {
     position: fixed;
     bottom: 20px;
@@ -1680,7 +1675,7 @@ nav .theme-toggle {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Additional Light Mode Adjustments for Better Contrast */
+
 .light-mode .heading {
     background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
     -webkit-background-clip: text;
@@ -1699,7 +1694,6 @@ nav .theme-toggle {
     color: #64748b;
 }
 
-/* Ensure proper text contrast in light mode */
 .light-mode .home-content h1 span {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     -webkit-background-clip: text;
