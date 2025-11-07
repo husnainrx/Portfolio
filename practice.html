@@ -102,10 +102,8 @@
       <div class="sidebar-nav">
           <a href="index.html">Home</a>
           <a href="project.html">Projects</a>
-           <a href="practice.html">
-                <span>Calculatr</span>
-            </a>
-          <a href="practice.html" class="active">Practice</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="practice.html">Practice</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
       </div>
@@ -124,10 +122,19 @@
             <label for="sidebar-toggle" class="sidebar-open-btn">☰</label>
             <a href="#" class="logo">Husnain<span>.</span></a>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="project.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="project.html" class="nav-link">Projects</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <div class="toggle-icons">
+                        <span class="sun">☀️</span>
+                        <div class="toggle-switch">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span class="moon">🌙</span>
+                    </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -137,7 +144,6 @@
             <h2 class="heading">Practice Tasks</h2>
             
             <div class="tasks-row">
-              
                 <div class="task-box">
                     <h3>Info Display</h3>
                     <input type="text" id="nameInput" placeholder="Name">
@@ -238,7 +244,8 @@
         resultDiv.textContent = `Average: ${average.toFixed(2)}`;
         resultDiv.className = "result success";
     }
-</script>
+  </script>
 
+  <script src="index.js"></script>
 </body>
 </html>

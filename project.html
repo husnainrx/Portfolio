@@ -15,21 +15,12 @@
             <label for="sidebar-toggle" class="sidebar-close-btn">×</label>
         </div>
         <div class="sidebar-nav">
-            <a href="index.html" class="active">
-                <span>Home</span>
-            </a>
-            <a href="project.html">
-                <span>Projects</span>
-            </a>
-            <a href="practice.html">
-                <span>Calculator</span>
-            </a>
-            <a href="about.html">
-                <span>About</span>
-            </a>
-            <a href="contact.html">
-                <span>Contact</span>
-            </a>
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="practice.html">Practice</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
 
         <div class="sidebar-footer">
@@ -46,10 +37,20 @@
                 <label for="sidebar-toggle" class="sidebar-open-btn">☰</label>
                 <a href="#" class="logo">Husnain<span>.</span></a>
                 <nav>
-                    <a href="index.html" class="active">Home</a>
-                    <a href="project.html">Projects</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="project.html" class="nav-link">Projects</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <!-- Theme Toggle Button -->
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                        <div class="toggle-icons">
+                            <span class="sun">☀️</span>
+                            <div class="toggle-switch">
+                                <div class="toggle-slider"></div>
+                            </div>
+                            <span class="moon">🌙</span>
+                        </div>
+                    </button>
                 </nav>
             </div>
         </header>
@@ -59,22 +60,19 @@
           <section class="about-section">
             <h2 class="heading">My <span>Projects</span></h2>
             <div class="about-content">
-        <div class="projects-container">
-            <div class="project-box" onclick="window.open('Projects/p1/home.html', '_blank')">
-            <h3>Movie Stream</h3>
-            <p>Website to stream Movies and Series Online.</p>
-         </div>
+                <div class="projects-container">
+                    <div class="project-box" onclick="window.open('Projects/p1/home.html', '_blank')">
+                        <h3>Movie Stream</h3>
+                        <p>Website to stream Movies and Series Online.</p>
+                    </div>
 
-         <div class="project-box" onclick="window.open('Projects/p2/home.html', '_blank')">
-            <h3>Sports Pulse</h3>
-            <p>Website to Get Live Match Updates and more.</p>
+                    <div class="project-box" onclick="window.open('Projects/p2/home.html', '_blank')">
+                        <h3>Sports Pulse</h3>
+                        <p>Website to Get Live Match Updates and more.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-
           </section>
-
-
         </div>
         <br>
       </main>
@@ -85,5 +83,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

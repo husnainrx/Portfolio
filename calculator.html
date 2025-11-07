@@ -17,8 +17,8 @@
       <div class="sidebar-nav">
           <a href="index.html">Home</a>
           <a href="project.html">Projects</a>
-          <a href="practice.html">Calculator</a>
-           <a href="practice.html">Practice</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="practice.html">Practice</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
       </div>
@@ -36,11 +36,20 @@
         <div class="container">
             <label for="sidebar-toggle" class="sidebar-open-btn">☰</label>
             <a href="#" class="logo">Husnain<span>.</span></a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="project.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+           <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="project.html" class="nav-link">Projects</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <div class="toggle-icons">
+                        <span class="sun">☀️</span>
+                        <div class="toggle-switch">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span class="moon">🌙</span>
+                    </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -70,7 +79,9 @@
             </div>
         </div>
     </main>
-
+    <br>
+    <br><br>
+    <br>
     <footer>
         <div class="container">
             <p>&copy; 2025 Husnain Rehman. All rights reserved.</p>
@@ -78,7 +89,6 @@
     </footer>
 </div>
 
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
