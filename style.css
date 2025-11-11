@@ -1568,3 +1568,237 @@ nav .theme-toggle {
         font-size: 1.3rem;
     }
 }
+
+ nav {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav .theme-toggle {
+            margin-left: 1rem;
+        }
+        .section-toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-toggle {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-toggle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .section-toggle:hover::before {
+            left: 100%;
+        }
+
+        .section-toggle:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-toggle:active {
+            transform: translateY(-1px);
+        }
+
+        .toggle-icon {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section-toggle:hover .toggle-icon {
+            transform: scale(1.2);
+        }
+        .section-content {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+
+        .hidden-section {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-20px);
+            pointer-events: none;
+        }
+
+        .visible-section {
+            max-height: 1000px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            transition: all 0.5s ease;
+        }
+
+        .hobbies-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+            transition: all 0.5s ease;
+        }
+
+        .hobbies-list li {
+            background: var(--bg-card);
+            margin: 1rem 0;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+            transition: var(--transition);
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hobbies-list li::before {
+            content: '✦';
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .hobbies-list li:hover {
+            transform: translateX(10px);
+            border-left-color: var(--primary-color);
+        }
+
+        .light-mode .section-toggle {
+            box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .light-mode .hobbies-list li {
+            background: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .skills-management {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .add-skill-form {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .skill-input {
+            padding: 10px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            width: 200px;
+            transition: var(--transition);
+        }
+        
+        .skill-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        .add-skill-btn {
+            background: var(--success-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .add-skill-btn:hover {
+            background: #0da271;
+            transform: translateY(-2px);
+        }
+        
+        #skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+            width: 180px;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .skill-item h3 {
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        .delete-skill {
+            background: var(--error-color);
+            color: white;
+            border: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 70%;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .delete-skill:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
